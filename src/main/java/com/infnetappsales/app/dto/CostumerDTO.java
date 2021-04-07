@@ -1,4 +1,4 @@
-package com.infnetappsales.dto;
+package com.infnetappsales.app.dto;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

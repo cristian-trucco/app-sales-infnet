@@ -1,17 +1,18 @@
-package com.infnetappsales.services;
+package com.infnetappsales.app.services;
 
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.infnetappsales.dto.ProductDTO;
-import com.infnetappsales.repository.ProductRepository;
+
+import com.infnetappsales.app.dto.ProductDTO;
+import com.infnetappsales.app.repository.ProductRepository;
 
 @Service
 public class ProductService {
 
 	@Autowired
-	public ProductRepository productRepository;
+	private ProductRepository productRepository;
 
 	public List<ProductDTO> getAll() {
 		return (List<ProductDTO>) productRepository.findAll();

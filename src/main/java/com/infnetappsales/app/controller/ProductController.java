@@ -1,4 +1,4 @@
-package com.infnetappsales.controller;
+package com.infnetappsales.app.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -12,11 +12,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.infnetappsales.dto.ProductDTO;
-import com.infnetappsales.services.ProductService;
+
+
+import com.infnetappsales.app.dto.ProductDTO;
+import com.infnetappsales.app.services.ProductService;
 
 @RestController
-@RequestMapping("/produtcs")
+@RequestMapping("/products")
 public class ProductController {
 
 	@Autowired
@@ -33,7 +35,7 @@ public class ProductController {
 	}
 
 	@PatchMapping("/{id}")
-	public ProductDTO  patchUser(@RequestBody ProductDTO product, @PathVariable Long id) {
+	public ProductDTO  patchProduct(@RequestBody ProductDTO product, @PathVariable Long id) {
 		if(!productService.exists(id)) return null;
 
 		return productService.update(product, id);

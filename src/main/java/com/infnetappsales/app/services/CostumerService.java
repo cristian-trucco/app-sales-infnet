@@ -1,11 +1,12 @@
-package com.infnetappsales.services;
+package com.infnetappsales.app.services;
 
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.infnetappsales.dto.CostumerDTO;
-import com.infnetappsales.repository.CostumerRepository;
+
+import com.infnetappsales.app.dto.CostumerDTO;
+import com.infnetappsales.app.repository.CostumerRepository;
 
 @Service
 public class CostumerService {

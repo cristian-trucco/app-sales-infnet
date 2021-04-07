@@ -1,8 +1,7 @@
-package com.infnetappsales.repository;
-
+package com.infnetappsales.app.repository;
 import org.springframework.data.repository.CrudRepository;
 
-import com.infnetappsales.dto.CostumerDTO;
+import com.infnetappsales.app.dto.CostumerDTO;
 
 public interface CostumerRepository extends CrudRepository<CostumerDTO,Long> {
 

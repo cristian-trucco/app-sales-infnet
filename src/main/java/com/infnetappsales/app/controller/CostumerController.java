@@ -1,4 +1,4 @@
-package com.infnetappsales.controller;
+package com.infnetappsales.app.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.infnetappsales.dto.CostumerDTO;
-import com.infnetappsales.services.CostumerService;
+import com.infnetappsales.app.dto.CostumerDTO;
+import com.infnetappsales.app.services.CostumerService;
 
 @RestController 
 @RequestMapping("/clients")
