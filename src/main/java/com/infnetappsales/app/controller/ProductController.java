@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
 import com.infnetappsales.app.dto.ProductDTO;
 import com.infnetappsales.app.services.ProductService;
 
@@ -25,7 +24,7 @@ public class ProductController {
 	private ProductService productService;
 
 	@GetMapping
-	public List<ProductDTO> getProducts(){
+	public List<ProductDTO> getProducts() {
 		return productService.getAll();
 	}
 
@@ -35,23 +34,27 @@ public class ProductController {
 	}
 
 	@PatchMapping("/{id}")
-	public ProductDTO  patchProduct(@RequestBody ProductDTO product, @PathVariable Long id) {
-		if(!productService.exists(id)) return null;
+	public ProductDTO patchProduct(@RequestBody ProductDTO product, @PathVariable Long id) {
+		if (!productService.exists(id))
+			return null;
 
 		return productService.update(product, id);
 	}
 
-	@GetMapping("/{id}")	
+	@GetMapping("/{id}")
 	public ProductDTO getProduct(@PathVariable Long id) {
 		Optional<ProductDTO> product = productService.getById(id);
-		if(product.isEmpty()) return null;
+		if (product.isEmpty())
+			return null;
 		return product.get();
 	}
 
-    @DeleteMapping("/{id}")
-	public Optional<ProductDTO> deletProduct( @PathVariable Long id) {
-		if(!productService.exists(id)) return null;
+	@DeleteMapping("/{id}")
+	public Optional<ProductDTO> deletProduct(@PathVariable Long id) {
+		if (!productService.exists(id))
+			return null;
 
 		return productService.deteletById(id);
 	}
+
 }

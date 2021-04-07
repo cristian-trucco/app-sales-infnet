@@ -9,27 +9,25 @@ public class ProductDTO {
 
 	@Id
 	@GeneratedValue
-	private long id;
+	private Long id;
 	private String name;
 	private Double price;
 	private String product_type_code;
-
-	
 
 	public ProductDTO() {
 
 	}
 
-	public ProductDTO(String name, String product_type_code, Double price) {
+	public ProductDTO(String name, Double price, String product_type_code) {
 		this.name = name;
-		this.product_type_code = product_type_code;
 		this.price = price;
+		this.product_type_code = product_type_code;
 	}
 
 	public Long getId() {
 		return id;
 	}
-	
+
 	public void setId(Long id) {
 		this.id = id;
 	}
@@ -37,7 +35,7 @@ public class ProductDTO {
 	public String getName() {
 		return name;
 	}
-	
+
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -49,7 +47,6 @@ public class ProductDTO {
 	public void setProduct_type_code(String product_type_code) {
 		this.product_type_code = product_type_code;
 	}
-	
 
 	public Double getPrice() {
 		return price;

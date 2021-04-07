@@ -10,7 +10,7 @@ public class CostumerDTO  {
 	@Id
 	@GeneratedValue
 	private Long id;
-	private String first_name;
+	private String name;
 	private String last_name;
 	private String cpf;
 	private String email;
@@ -21,8 +21,8 @@ public class CostumerDTO  {
 
 	}
 
-	public CostumerDTO(String first_name, String cpf, String email) {
-		this.first_name = first_name;
+	public CostumerDTO(String name, String cpf, String email) {
+		this.name = name;
 		this.cpf = cpf;
 		this.email = email;
 	}
@@ -35,8 +35,8 @@ public class CostumerDTO  {
 		this.id = id;
 	}
 
-	public String getFirstName() {
-		return first_name;
+	public String getName() {
+		return name;
 	}
 
 	public String getCpf() {
